@@ -6,7 +6,7 @@ When Dual Booting, This Script will Force Grub2win to Boot when Powering on rath
 
 A systemd service is installed that tells the system to launch Grub2win on the next boot (as seen in `efibootmgr`).
 
-Updated Script will now set `BootNext` (the next OS to boot) to `CurrentBoot` (the OS you are currently in aka SteamOS)
+Updated Script will now set `BootNext` (the next OS to boot) to `CurrentBoot` (the OS you are currently in aka Grub2win)
 
 # Install (via Curl)
 
