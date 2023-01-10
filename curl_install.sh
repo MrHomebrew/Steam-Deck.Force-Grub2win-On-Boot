@@ -1,23 +1,23 @@
 #!/bin/bash
-#Steam Deck Force-SteamOS-On-Boot by scawp
-#License: DBAD: https://github.com/scawp/Steam-Deck.Force-SteamOS-On-Boot/blob/main/LICENSE.md
-#Source: https://github.com/scawp/Steam-Deck.Force-SteamOS-On-Boot
+#Steam Deck Force-Grub2win-On-Boot by MrHomebrew
+#License: DBAD: https://github.com/MrHomebrew/Steam-Deck.Force-Grub2win-On-Boot/blob/main/LICENSE.md
+#Source: https://github.com/MrHomebrew/Steam-Deck.Force-SteamOS-On-Boot
 # Use at own Risk!
 
-#curl -sSL https://raw.githubusercontent.com/scawp/Steam-Deck.Force-SteamOS-On-Boot/main/curl_install.sh | bash
+#curl -sSL https://raw.githubusercontent.com/MrHomebrew/Steam-Deck.Force-Grub2win-On-Boot/main/curl_install.sh | bash
 
 #stop running script if anything returns an error (non-zero exit )
 set -e
 
-repo_url="https://raw.githubusercontent.com/scawp/Steam-Deck.Force-SteamOS-On-Boot/main"
+repo_url="https://raw.githubusercontent.com/MrHomebrew/Steam-Deck.Force-Grube2win-On-Boot/main"
 
-tmp_dir="/tmp/scawp.SDFSOB.install"
+tmp_dir="/tmp/MrHomebrew.SDFG2WB.install"
 
 service_install_dir="/etc/systemd/system"
 
 zenity --question --width=400 \
   --text="Read $repo_url/README.md before proceeding. \
-\nDo you want to install the Force-SteamOS-On-Boot service?"
+\nDo you want to install the Force-Grub2win-On-Boot service?"
 if [ "$?" != 0 ]; then
   #NOTE: This code will never be reached due to "set -e", the system will already exit for us but just incase keep this
   echo "bye then! xxx"
@@ -28,14 +28,14 @@ echo "Making tmp folder $tmp_dir"
 mkdir -p "$tmp_dir"
 
 echo "Downloading Required Files"
-curl -o "$tmp_dir/force-steamos-on-next-boot.service" "$repo_url/force-steamos-on-next-boot.service"
+curl -o "$tmp_dir/force-grub2win-on-next-boot.service" "$repo_url/force-grub2win-on-next-boot.service"
 
-echo "Copying $tmp_dir/force-steamos-on-next-boot.service to $service_install_dir/force-steamos-on-next-boot.service"
-sudo cp "$tmp_dir/force-steamos-on-next-boot.service" "$service_install_dir/force-steamos-on-next-boot.service"
+echo "Copying $tmp_dir/force-grub2win-on-next-boot.service to $service_install_dir/force-grub2win-on-next-boot.service"
+sudo cp "$tmp_dir/force-grub2win-on-next-boot.service" "$service_install_dir/force-grub2win-on-next-boot.service"
 
 echo "Starting Service"
-sudo systemctl enable force-steamos-on-next-boot.service
-sudo systemctl start force-steamos-on-next-boot.service
+sudo systemctl enable force-grub2win-on-next-boot.service
+sudo systemctl start force-grub2win-on-next-boot.service
 
 
 echo "Done."
