@@ -9,6 +9,11 @@
 #stop running script if anything returns an error (non-zero exit )
 set -e
 
+efibootmgr | tee ~/efibootlist.txt
+WINDOWS_BOOTNUM="$(grep -A0 'Windows' ~/efibootlist.txt | grep -Eo '[0-9]{1,4}' | head -1)"
+# Disable Windows EFI boot entry
+sudo efibootmgr -b $WINDOWS_BOOTNUM -A
+
 repo_url="https://raw.githubusercontent.com/MrHomebrew/Steam-Deck.Force-Grub2win-On-Boot/main"
 
 tmp_dir="/tmp/MrHomebrew.SDFG2WB.install"
