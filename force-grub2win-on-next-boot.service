@@ -1,5 +1,5 @@
 [Unit]
-Description=Set UEFI BootNext to Grub2win
+Description=Set UEFI BootNext to SteamOS
 
 [Service]
 Type=oneshot
