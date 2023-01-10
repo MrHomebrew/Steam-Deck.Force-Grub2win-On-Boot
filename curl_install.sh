@@ -36,6 +36,8 @@ sudo cp "$tmp_dir/force-grub2win-on-next-boot.service" "$service_install_dir/for
 echo "Starting Service"
 sudo systemctl enable --now force-grub2win-on-next-boot.service
 
+fi
+
 echo "Starting rename of Microsoft to Deck"
 sudo su mv /esp/efi/Microsoft /esp/efi/Deck
 
