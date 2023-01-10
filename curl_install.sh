@@ -9,7 +9,7 @@
 #stop running script if anything returns an error (non-zero exit )
 set -e
 
-repo_url="https://raw.githubusercontent.com/MrHomebrew/Steam-Deck.Force-Grube2win-On-Boot/main"
+repo_url="https://raw.githubusercontent.com/MrHomebrew/Steam-Deck.Force-Grub2win-On-Boot/main"
 
 tmp_dir="/tmp/MrHomebrew.SDFG2WB.install"
 
