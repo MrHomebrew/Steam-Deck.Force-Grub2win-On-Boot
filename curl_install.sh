@@ -1,7 +1,7 @@
 #!/bin/bash
 #Steam Deck Force-Grub2win-On-Boot by MrHomebrew
 #License: DBAD: https://github.com/MrHomebrew/Steam-Deck.Force-Grub2win-On-Boot/blob/main/LICENSE.md
-#Source: https://github.com/MrHomebrew/Steam-Deck.Force-SteamOS-On-Boot
+#Source: https://github.com/MrHomebrew/Steam-Deck.Force-Grub2win-On-Boot
 # Use at own Risk!
 
 #curl -sSL https://raw.githubusercontent.com/MrHomebrew/Steam-Deck.Force-Grub2win-On-Boot/main/curl_install.sh | bash
