@@ -34,7 +34,7 @@ echo "Copying $tmp_dir/force-grub2win-on-next-boot.service to $service_install_d
 sudo cp "$tmp_dir/force-grub2win-on-next-boot.service" "$service_install_dir/force-grub2win-on-next-boot.service"
 
 echo "Starting Service"
-sudo systemctl enable force-grub2win-on-next-boot.service
+sudo systemctl enable --now force-grub2win-on-next-boot.service
 sudo systemctl start force-grub2win-on-next-boot.service
 
 
