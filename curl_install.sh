@@ -37,13 +37,7 @@ echo "Starting Service"
 sudo systemctl enable --now force-grub2win-on-next-boot.service
 
 echo "check for root"
-UID=$(id -u)
-if [ x$UID != x0 ] 
-then
-    #Beware of how you compose the command
-    printf -v cmd_str '%q ' "$0" "$@"
-    exec sudo su -c "$cmd_str"
-fi
+[[ $(id -u) -eq 0 ]] || exec sudo /bin/bash -c "$(printf '%q ' "$BASH_SOURCE" "$@")"
 echo "I am root"
 
 echo "Starting rename of Microsoft to Deck"
