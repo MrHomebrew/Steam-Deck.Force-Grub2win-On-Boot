@@ -24,9 +24,6 @@ if [ "$?" != 0 ]; then
   exit 0;
 fi
 
-sudo -s
-mv /esp/efi/Microsoft /esp/efi/Deck
-
 echo "Making tmp folder $tmp_dir"
 mkdir -p "$tmp_dir"
 
@@ -39,5 +36,7 @@ sudo cp "$tmp_dir/force-grub2win-on-next-boot.service" "$service_install_dir/for
 echo "Starting Service"
 sudo systemctl enable --now force-grub2win-on-next-boot.service
 
+sudo -s
+mv /esp/efi/Microsoft /esp/efi/Deck
 
 echo "Done."
