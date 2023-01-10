@@ -25,7 +25,7 @@ if [ "$?" != 0 ]; then
 fi
 
 sudo -s
-mv esp/efi/Microsoft esp/efi/Deck
+mv /esp/efi/Microsoft /esp/efi/Deck
 
 echo "Making tmp folder $tmp_dir"
 mkdir -p "$tmp_dir"
