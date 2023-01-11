@@ -36,11 +36,9 @@ sudo cp "$tmp_dir/force-grub2win-on-next-boot.service" "$service_install_dir/for
 echo "Starting Service"
 sudo systemctl enable --now force-grub2win-on-next-boot.service
 
-echo "check for root"
-[[ $(id -u) -eq 0 ]] || exec sudo /bin/bash -c "$(printf '%q ' "$BASH_SOURCE" "$@")"
-echo "I am root"
-
 echo "Starting rename of Microsoft to Deck"
-sudo su mv /esp/efi/Microsoft /esp/efi/Deck
+mount /dev/nvme0n1p1 /mnt
+cd /mnt
+mv /esp/efi/Microsoft /esp/efi/Deck
 
 echo "Done."
