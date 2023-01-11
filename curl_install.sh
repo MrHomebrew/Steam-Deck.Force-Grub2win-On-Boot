@@ -37,7 +37,6 @@ echo "Starting Service"
 sudo systemctl enable --now force-grub2win-on-next-boot.service
 
 echo "Starting rename of Microsoft to Deck"
-sudo mount /dev/nvme0n1p1 /mnt
 sudo sh -c "cd /mnt; sudo mv /esp/efi/Microsoft /esp/efi/Deck"
 
 echo "Done."
