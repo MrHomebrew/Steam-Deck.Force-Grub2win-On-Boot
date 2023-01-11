@@ -38,14 +38,14 @@ sudo systemctl enable --now force-grub2win-on-next-boot.service
 
 zenity --question --width=400 \
   --text="Read $repo_url/README.md before proceeding. \
-\nDo you want to rename the Microsoft folder in the esp/efi partition directory to Deck?"
+\nDo you want to rename the bootmgfw.efi file in esp/efi/Microsoft/boot partition directory to bootmgfw-orig.efi?"
 if [ "$?" != 0 ]; then
   #NOTE: This code will never be reached due to "set -e", the system will already exit for us but just incase keep this
   echo "bye then! xxx"
   exit 0;
 fi
 
-echo "Starting rename of Microsoft to Deck"
-sudo sh -c "cd /mnt; sudo mv /esp/efi/Microsoft/bootmgfw.efi /esp/efi/Microsoft/bootmgfw-orig.efi"
+echo "Starting rename of bootmgfw.efi file to bootmgfw-orig.efi"
+sudo sh -c "cd /mnt; sudo mv /esp/efi/Microsoft/boot/bootmgfw.efi /esp/efi/Microsoft/boot/bootmgfw-orig.efi"
 
 echo "Done."
