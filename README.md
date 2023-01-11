@@ -24,7 +24,7 @@ Rename bootmgfw-orig.efi back to bootmgfw.efi
 
 `sudo sh -c "cd /mnt; sudo mv /esp/efi/Microsoft/boot/bootmgfw-orig.efi /esp/efi/Microsoft/boot/bootmgfw.efi"`
 
-Simply Delete the service
+Simply Delete the systemd service
 
 `sudo rm /etc/systemd/system/force-grub2win-on-next-boot.service`
 
