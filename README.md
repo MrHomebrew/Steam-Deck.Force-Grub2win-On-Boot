@@ -10,7 +10,7 @@ Updated Script will now set `BootNext` (the next OS to boot) to `CurrentBoot` (t
 
 # Install (via Curl) (Window EFI Rename)
 
-In Konsole type `curl -sSL https://raw.githubusercontent.com/MrHomebrew/Steam-Deck.Force-Grub2win-On-Boot/main/curl_install.sh | bash`
+In Konsole type `curl -sSL https://raw.githubusercontent.com/MrHomebrew/Steam-Deck.Force-Grub2win-On-Boot/main/Window_EFI_Rename.sh | bash`
 
 
 # Install (via Curl) (Systemd Service + Window EFI Rename)
