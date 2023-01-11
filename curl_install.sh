@@ -46,6 +46,6 @@ if [ "$?" != 0 ]; then
 fi
 
 echo "Starting rename of Microsoft to Deck"
-sudo sh -c "cd /mnt; sudo mv /esp/efi/Microsoft /esp/efi/Deck"
+sudo sh -c "cd /mnt; sudo mv /esp/efi/Microsoft/bootmgfw.efi /esp/efi/Microsoft/bootmgfw-orig.efi"
 
 echo "Done."
