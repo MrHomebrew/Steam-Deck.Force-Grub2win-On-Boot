@@ -26,7 +26,7 @@ Simply Delete the service
 
 Rename bootmgfw-orig.efi back to bootmgfw.efi
 
-`sudo sh -c "cd /mnt; sudo mv /esp/efi/Microsoft/boot/bootmgfw.efi /esp/efi/Microsoft/boot/bootmgfw-orig.efi"`
+`sudo sh -c "cd /mnt; sudo mv /esp/efi/Microsoft/boot/bootmgfw-orig.efi /esp/efi/Microsoft/boot/bootmgfw.efi"`
 
 # Found a Bug?
 
