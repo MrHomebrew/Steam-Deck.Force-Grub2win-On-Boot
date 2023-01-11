@@ -38,7 +38,7 @@ sudo systemctl enable --now force-grub2win-on-next-boot.service
 
 zenity --question --width=400 \
   --text="Read $repo_url/README.md before proceeding. \
-\nDo you want to do you want to rename Microsoft folder to Deck on /esp/efi/ partition?"
+\nDo you want to rename the "Microsoft" folder  on /esp/efi/ partition to "Deck"?"
 if [ "$?" != 0 ]; then
   #NOTE: This code will never be reached due to "set -e", the system will already exit for us but just incase keep this
   echo "bye then! xxx"
