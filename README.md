@@ -20,13 +20,13 @@ In Konsole type `curl -sSL https://raw.githubusercontent.com/MrHomebrew/Steam-De
 
 # Uninstall
 
-Simply Delete the service
-
-`sudo rm /etc/systemd/system/force-grub2win-on-next-boot.service`
-
 Rename bootmgfw-orig.efi back to bootmgfw.efi
 
 `sudo sh -c "cd /mnt; sudo mv /esp/efi/Microsoft/boot/bootmgfw-orig.efi /esp/efi/Microsoft/boot/bootmgfw.efi"`
+
+Simply Delete the service
+
+`sudo rm /etc/systemd/system/force-grub2win-on-next-boot.service`
 
 # Found a Bug?
 
