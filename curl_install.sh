@@ -36,6 +36,15 @@ sudo cp "$tmp_dir/force-grub2win-on-next-boot.service" "$service_install_dir/for
 echo "Starting Service"
 sudo systemctl enable --now force-grub2win-on-next-boot.service
 
+zenity --question --width=400 \
+  --text="Read $repo_url/README.md before proceeding. \
+\nDo you want to do you want to rename Microsoft folder to Deck on /esp/efi/ partition?"
+if [ "$?" != 0 ]; then
+  #NOTE: This code will never be reached due to "set -e", the system will already exit for us but just incase keep this
+  echo "bye then! xxx"
+  exit 0;
+fi
+
 echo "Starting rename of Microsoft to Deck"
 sudo sh -c "cd /mnt; sudo mv /esp/efi/Microsoft /esp/efi/Deck"
 
