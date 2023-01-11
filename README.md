@@ -8,7 +8,12 @@ A systemd service is installed that tells the system to launch Grub2win on the n
 
 Updated Script will now set `BootNext` (the next OS to boot) to `CurrentBoot` (the OS you are currently in aka Grub2win)
 
-# Install (via Curl)
+# Install (via Curl) (Window EFI Rename)
+
+In Konsole type `curl -sSL https://raw.githubusercontent.com/MrHomebrew/Steam-Deck.Force-Grub2win-On-Boot/main/curl_install.sh | bash`
+
+
+# Install (via Curl) (Systemd Service + Window EFI Rename)
 
 In Konsole type `curl -sSL https://raw.githubusercontent.com/MrHomebrew/Steam-Deck.Force-Grub2win-On-Boot/main/curl_install.sh | bash`
 
@@ -19,11 +24,14 @@ Simply Delete the service
 
 `sudo rm /etc/systemd/system/force-grub2win-on-next-boot.service`
 
+Rename bootmgfw-orig.efi back to bootmgfw.efi
+
+`sudo sh -c "cd /mnt; sudo mv /esp/efi/Microsoft/boot/bootmgfw.efi /esp/efi/Microsoft/boot/bootmgfw-orig.efi"`
 
 # Found a Bug?
 
 Please add to the `issues` tab! https://github.com/MrHomebrew/Steam-Deck.Force-Grub2win-On-Boot/issues
 
 # "This is cool! How can I thank you?"
-### Why not drop me a sub over on my youtube channel ;) [Chinballs Gaming](https://youtube.com/@JasonLeonidas?sub_confirmation=1)
+### Why not drop me a sub over on my youtube channel ;) [MrHomebrew](https://youtube.com/@JasonLeonidas?sub_confirmation=1)
 
