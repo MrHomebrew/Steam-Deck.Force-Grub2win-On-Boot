@@ -12,6 +12,8 @@
 
 #stop running script if anything returns an error (non-zero exit )
 
+repo_url="https://raw.githubusercontent.com/MrHomebrew/Steam-Deck.Force-Grub2win-On-Boot/main"
+
 zenity --question --width=400 \
 
   --text="Read $repo_url/README.md before proceeding. \
