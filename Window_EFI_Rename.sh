@@ -11,6 +11,7 @@
 #curl -sSL https://raw.githubusercontent.com/MrHomebrew/Steam-Deck.Force-Grub2win-On-Boot/main/Window_EFI_Rename.sh | bash
 
 #stop running script if anything returns an error (non-zero exit )
+set -e
 
 repo_url="https://raw.githubusercontent.com/MrHomebrew/Steam-Deck.Force-Grub2win-On-Boot/main"
 
